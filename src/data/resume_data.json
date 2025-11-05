@@ -98,7 +98,7 @@
     "backendFrameworks": ["Spring Boot", "Hibernate", "React JS", "Node JS"],
     "databases": ["MySQL", "SAP HANA", "MongoDB", "DynamoDB", "Redis"],
     "devops": ["AWS", "Docker", "Kubernetes", "Kafka", "Git", "Azure"],
-    "other": ["Linux CLI", "REST API", "Microservices", "Code Review", "SDLC", "CI/CD", "Jenkins", "Quality Assurance", "Unit Testing", "Documentation", "Agile", "distributed system"]
+    "other": ["Linux CLI", "Jenkins"]
   },
   "certifications": [
     {
