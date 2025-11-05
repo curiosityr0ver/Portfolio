@@ -14,7 +14,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/assets/resume_data.json')
+    fetch(`/assets/resume_data.json?t=${Date.now()}`)
       .then((res) => res.json())
       .then((data) => {
         setResumeData(data);
