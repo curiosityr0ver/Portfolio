@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useScrollSpy } from '../hooks/useScrollSpy';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const sectionIds = ['hero', 'experience', 'education', 'projects', 'skills', 'github-activity', 'leetcode-activity', 'certifications', 'contact'];
+  const activeSection = useScrollSpy(sectionIds, 150);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -52,12 +56,70 @@ export default function Navigation() {
             </span>
           </button>
           <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-            <li><button onClick={() => scrollToSection('experience')}>Experience</button></li>
-            <li><button onClick={() => scrollToSection('education')}>Education</button></li>
-            <li><button onClick={() => scrollToSection('projects')}>Projects</button></li>
-            <li><button onClick={() => scrollToSection('skills')}>Skills</button></li>
-            <li><button onClick={() => scrollToSection('certifications')}>Certifications</button></li>
-            <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('experience')}
+                className={activeSection === 'experience' ? 'active' : ''}
+              >
+                Experience
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('education')}
+                className={activeSection === 'education' ? 'active' : ''}
+              >
+                Education
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className={activeSection === 'projects' ? 'active' : ''}
+              >
+                Projects
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('skills')}
+                className={activeSection === 'skills' ? 'active' : ''}
+              >
+                Skills
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('github-activity')}
+                className={activeSection === 'github-activity' ? 'active' : ''}
+              >
+                Activity
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('leetcode-activity')}
+                className={activeSection === 'leetcode-activity' ? 'active' : ''}
+              >
+                LeetCode
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('certifications')}
+                className={activeSection === 'certifications' ? 'active' : ''}
+              >
+                Certifications
+              </button>
+            </li>
+            <li>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className={activeSection === 'contact' ? 'active' : ''}
+              >
+                Contact
+              </button>
+            </li>
           </ul>
         </div>
       </nav>

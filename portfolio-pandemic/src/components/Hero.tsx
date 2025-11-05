@@ -5,6 +5,13 @@ interface HeroProps {
 }
 
 export default function Hero({ personalInfo }: HeroProps) {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="hero" className="hero">
       <div className="hero-content">
@@ -15,9 +22,9 @@ export default function Hero({ personalInfo }: HeroProps) {
             Building scalable backend systems and full-stack applications with a passion for clean code and efficient solutions.
           </p>
           <div className="hero-links">
-            <a href={`mailto:${personalInfo.email}`} className="link-button primary">
+            <button onClick={scrollToContact} className="link-button primary">
               Get In Touch
-            </a>
+            </button>
             <a href={personalInfo.links.github} target="_blank" rel="noopener noreferrer" className="link-button secondary">
               View GitHub
             </a>
