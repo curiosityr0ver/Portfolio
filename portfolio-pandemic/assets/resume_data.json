@@ -1,0 +1,122 @@
+{
+  "personalInfo": {
+    "name": "Ishu Mehta",
+    "email": "mehta.ishu14@gmail.com",
+    "phone": "+91-8860854329",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/ishu-mehta-77ba4b201",
+      "github": "https://github.com/curiosityr0ver",
+      "leetcode": "https://leetcode.com/u/user6295j"
+    }
+  },
+  "education": [
+    {
+      "institution": "ITER Bhubaneswar (SOA University)",
+      "location": "Bhubaneswar, Odisha",
+      "degree": "B.Tech (CSE)",
+      "cgpa": "9.17",
+      "startDate": "June 2020",
+      "endDate": "July 2024",
+      "website": "https://www.soa.ac.in/iter",
+      "universityWebsite": "https://www.soa.ac.in"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Deloitte USI",
+      "position": "Backend Developer",
+      "location": "Hyderabad",
+      "startDate": "October 2024",
+      "endDate": "present",
+      "website": "https://www2.deloitte.com/us/en.html",
+      "responsibilities": [
+        "Built Spring Boot microservices on SAP BTP (Cloud Foundry) using SAP Cloud SDK for Java, Destination service and XSUAA for secure S/4 connectivity; implemented retry/circuit-breaker and unit/integration tests.",
+        "Containerized spring microservices for Kyma runtime (Kubernetes) and automated image builds; implemented health checks, readiness probes and k8s manifests for microservice scaling.",
+        "Designed and implemented RESTful OData APIs (SAP Gateway) consumed by Spring microservices and Salesforce integrations; owned API contract, authentication, and schema versioning for 6 endpoints used by 3 downstream services (~10k requests/day).",
+        "Optimized S/4 HANA Open SQL queries by refactoring CDS views and stored procedures, cutting average query latency from 220ms to 161ms for reporting workloads and lowering DB cost due to fewer cold scans.",
+        "Participated in a firm initiative to transition Ascend Build to GPT-5 and implemented RAG (retrieval-augmented generation) pipeline that indexes ABAP templates for context-aware code generation.",
+        "Migrated the prompt library, updated retriever/schema, and added CI gates and naming/static-analysis validators.",
+        "Built event-driven interfaces (SAP PI/PO) to process real-time transactions; implemented idempotency and retry logic reducing duplicate transactions and improving end-to-end success rate."
+      ]
+    },
+    {
+      "company": "Cuvette Tech",
+      "position": "SDE Intern",
+      "location": "Remote",
+      "startDate": "March 2024",
+      "endDate": "August 2024",
+      "website": "https://www.cuvette.tech",
+      "responsibilities": [
+        "Improved front-end performance by debouncing and paginating fetch calls in React; reduced API calls by 32% and average page TTFB by 20ms — lowered client CPU spikes on mobile devices and improved perceived UX.",
+        "Revamped indexing to reduce compute cost of get requests to the server and improving latency by 20ms.",
+        "Worked on 5+ pages to make the UI/UX responsive for mobile and tablet displays.",
+        "Helped migrate student record log from MongoDB to DynamoDB (AWS)."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Vaultfolio",
+      "technologies": ["Spring Framework", "Spring Security", "Spring MVC", "JPA/Hibernate", "MySQL", "Docker", "Gemini AI"],
+      "github": "/github",
+      "description": "Full-stack crypto portfolio service with JWT + 2FA auth, payment gateway integrations (Razorpay & Stripe), and Dockerized CI pipeline.",
+      "thumbnail": "assets/projects/vaultfolio-thumbnail.png",
+      "screenshots": [
+        "assets/projects/vaultfolio-screenshot-1.png",
+        "assets/projects/vaultfolio-screenshot-2.png"
+      ],
+      "highlights": [
+        "Built and deployed a full-stack crypto portfolio service with JWT + 2FA auth, payment gateway integrations (Razorpay & Stripe), and Dockerized CI pipeline; handled simulated load of 5k concurrent users in local stress tests and added unit + integration tests covering 72% of backend logic.",
+        "Integrated multiple payment gateways (Razorpay for domestic, Stripe for international) to handle crypto transactions, wallet-to-wallet transfers, and bank withdrawals with real-time processing.",
+        "Developed AI-powered chatbot using Gemini AI API for cryptocurrency queries and market analysis. Integrated CoinGecko API for real-time crypto prices, historical data, and portfolio tracking.",
+        "Containerized application using Docker and Docker Compose with automated DDL generation via Hibernate.",
+        "Implemented comprehensive REST APIs for portfolio management, wallet operations, and transaction processing."
+      ]
+    },
+    {
+      "name": "Matrix Analyzer",
+      "technologies": ["Data Analytics", "Linear Algebra"],
+      "github": "/github",
+      "description": "Matrix operations tool with advanced linear algebra capabilities",
+      "thumbnail": "assets/projects/matrix-analyzer-thumbnail.png",
+      "screenshots": [
+        "assets/projects/matrix-analyzer-screenshot-1.png",
+        "assets/projects/matrix-analyzer-screenshot-2.png"
+      ],
+      "highlights": [
+        "Perform LU-Factorization, LDV-Factorization, Echelon Form, Transpose & Inverse as well as give statistics such as determinant, trace and eigenvalues for upto 1024 × 1024 dimension matrices.",
+        "Implemented cache-aware blocked matrix multiplication with tiled layout and multithreading; reduced wall-clock time for 1024 × 1024 dense multiplies by 12% vs naive O(n3) implementation.",
+        "Hardened numerical stability: automatic scaling, pivoting in LU, and condition-number estimation; reduced relative solution error for ill-conditioned matrices by 13% in benchmarks.",
+        "Extended to graph analytics: adjacency-matrix conversion, BFS/DFS, PageRank (power iteration), and spectral clustering—used to demonstrate reachability and centrality on real-world graphs"
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "languages": ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
+    "backendFrameworks": ["Spring Boot", "Hibernate", "React JS", "Node JS"],
+    "databases": ["MySQL", "SAP HANA", "MongoDB", "DynamoDB", "Redis"],
+    "devops": ["AWS", "Docker", "Kubernetes", "Kafka", "Git", "Azure"],
+    "other": ["Linux CLI", "REST API", "Microservices", "Code Review", "SDLC", "CI/CD", "Jenkins", "Quality Assurance", "Unit Testing", "Documentation", "Agile", "distributed system"]
+  },
+  "certifications": [
+    {
+      "name": "SAP Certified Associate - Backend Developer - ABAP Cloud",
+      "issuer": "SAP",
+      "certificateUrl": "https://www.credly.com/users/your-username/badges",
+      "verificationUrl": "https://www.sap.com/training-certification/certifications.html"
+    },
+    {
+      "name": "Claude in Amazon Bedrock",
+      "issuer": "Amazon",
+      "certificateUrl": "https://www.credly.com/users/your-username/badges",
+      "verificationUrl": "https://aws.amazon.com/training/certification/"
+    }
+  ],
+  "achievements": [
+    {
+      "platform": "LeetCode",
+      "description": "527 problems solved (169 Easy, 305 Medium, 53 Hard), Contest Rating: 1,453"
+    }
+  ]
+}
+
