@@ -407,6 +407,23 @@
   box-shadow: var(--shadow-md);
 }
 
+.social-links a img {
+  filter: brightness(0) saturate(0) opacity(0.6);
+  transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] .social-links a img {
+  filter: brightness(0) invert(1);
+}
+
+.social-links a:hover img {
+  filter: brightness(0) sepia(1) saturate(5) hue-rotate(200deg);
+}
+
+[data-theme="dark"] .social-links a:hover img {
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(200deg);
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 6rem 1.5rem 3rem;
