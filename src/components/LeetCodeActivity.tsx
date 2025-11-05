@@ -11,8 +11,6 @@ interface LeetCodeActivityProps {
 }
 
 export default function LeetCodeActivity({ leetcodeUrl, stats }: LeetCodeActivityProps) {
-  // Extract username from LeetCode URL
-  const username = leetcodeUrl.split('/').pop() || '';
 
   // If we have stats, use them; otherwise we'll try to fetch or use a service
   const totalSolved = stats?.totalSolved || 527;
