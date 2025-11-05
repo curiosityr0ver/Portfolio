@@ -400,6 +400,12 @@
   background: var(--bg-secondary);
 }
 
+.social-links a svg {
+  border-radius: 8px;
+  padding: 4px;
+  overflow: hidden;
+}
+
 .social-links a:hover {
   color: var(--primary-color);
   background: var(--bg-tertiary);
