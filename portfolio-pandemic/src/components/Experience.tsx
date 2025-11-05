@@ -13,11 +13,16 @@ export default function Experience({ experiences }: ExperienceProps) {
           {experiences.map((exp, index) => (
             <div key={index} className="experience-item">
               <div className="experience-header">
-                <div>
-                  <h3 className="experience-position">{exp.position}</h3>
-                  <a href={exp.website} target="_blank" rel="noopener noreferrer" className="experience-company">
-                    {exp.company}
-                  </a>
+                <div className="experience-header-content">
+                  {exp.icon && (
+                    <img src={exp.icon} alt={`${exp.company} logo`} className="experience-icon" />
+                  )}
+                  <div>
+                    <h3 className="experience-position">{exp.position}</h3>
+                    <a href={exp.website} target="_blank" rel="noopener noreferrer" className="experience-company">
+                      {exp.company}
+                    </a>
+                  </div>
                 </div>
                 <div className="experience-meta">
                   <span className="experience-location">{exp.location}</span>

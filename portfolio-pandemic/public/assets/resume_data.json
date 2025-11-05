@@ -17,7 +17,8 @@
       "startDate": "June 2020",
       "endDate": "July 2024",
       "website": "https://www.soa.ac.in/iter",
-      "universityWebsite": "https://www.soa.ac.in"
+      "universityWebsite": "https://www.soa.ac.in",
+      "icon": "/assets/soa_icon.webp"
     }
   ],
   "experience": [
@@ -27,7 +28,8 @@
       "location": "Hyderabad",
       "startDate": "October 2024",
       "endDate": "present",
-      "website": "https://www2.deloitte.com/us/en.html",
+      "website": "https://www.deloitte.com/ui/en/about.html",
+      "icon": "/assets/deloitte_icon.png",
       "responsibilities": [
         "Built Spring Boot microservices on SAP BTP (Cloud Foundry) using SAP Cloud SDK for Java, Destination service and XSUAA for secure S/4 connectivity; implemented retry/circuit-breaker and unit/integration tests.",
         "Containerized spring microservices for Kyma runtime (Kubernetes) and automated image builds; implemented health checks, readiness probes and k8s manifests for microservice scaling.",
@@ -45,6 +47,7 @@
       "startDate": "March 2024",
       "endDate": "August 2024",
       "website": "https://www.cuvette.tech",
+      "icon": "/assets/cuvette_icon.png",
       "responsibilities": [
         "Improved front-end performance by debouncing and paginating fetch calls in React; reduced API calls by 32% and average page TTFB by 20ms — lowered client CPU spikes on mobile devices and improved perceived UX.",
         "Revamped indexing to reduce compute cost of get requests to the server and improving latency by 20ms.",

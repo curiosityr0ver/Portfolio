@@ -13,11 +13,16 @@ export default function Education({ education }: EducationProps) {
           {education.map((edu, index) => (
             <div key={index} className="education-item">
               <div className="education-header">
-                <div>
-                  <h3 className="education-degree">{edu.degree}</h3>
-                  <a href={edu.website} target="_blank" rel="noopener noreferrer" className="education-institution">
-                    {edu.institution}
-                  </a>
+                <div className="education-header-content">
+                  {edu.icon && (
+                    <img src={edu.icon} alt={`${edu.institution} logo`} className="education-icon" />
+                  )}
+                  <div>
+                    <h3 className="education-degree">{edu.degree}</h3>
+                    <a href={edu.website} target="_blank" rel="noopener noreferrer" className="education-institution">
+                      {edu.institution}
+                    </a>
+                  </div>
                 </div>
                 <div className="education-meta">
                   <span className="education-location">{edu.location}</span>

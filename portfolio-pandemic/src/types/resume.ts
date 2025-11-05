@@ -17,6 +17,7 @@ export type Education = {
   endDate: string;
   website: string;
   universityWebsite: string;
+  icon?: string;
 };
 
 export type Experience = {
@@ -26,6 +27,7 @@ export type Experience = {
   startDate: string;
   endDate: string;
   website: string;
+  icon?: string;
   responsibilities: string[];
 };
 
