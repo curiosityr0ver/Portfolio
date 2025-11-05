@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useScrollSpy } from '../hooks/useScrollSpy';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,25 +44,28 @@ export default function Navigation() {
           <div className="nav-logo" onClick={() => scrollToSection('hero')}>
             IM
           </div>
-          <button 
-            className="mobile-menu-toggle"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-            aria-expanded={isMenuOpen}
-          >
-            <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </button>
+          <div className="nav-right">
+            <ThemeToggle />
+            <button 
+              className="mobile-menu-toggle"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+            >
+              <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
           <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
             <li>
               <button 
                 onClick={() => scrollToSection('experience')}
                 className={activeSection === 'experience' ? 'active' : ''}
               >
-                Experience
+                <span data-text="Experience">Experience</span>
               </button>
             </li>
             <li>
@@ -69,7 +73,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('education')}
                 className={activeSection === 'education' ? 'active' : ''}
               >
-                Education
+                <span data-text="Education">Education</span>
               </button>
             </li>
             <li>
@@ -77,7 +81,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('projects')}
                 className={activeSection === 'projects' ? 'active' : ''}
               >
-                Projects
+                <span data-text="Projects">Projects</span>
               </button>
             </li>
             <li>
@@ -85,7 +89,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('skills')}
                 className={activeSection === 'skills' ? 'active' : ''}
               >
-                Skills
+                <span data-text="Skills">Skills</span>
               </button>
             </li>
             <li>
@@ -93,7 +97,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('github-activity')}
                 className={activeSection === 'github-activity' ? 'active' : ''}
               >
-                Activity
+                <span data-text="Activity">Activity</span>
               </button>
             </li>
             <li>
@@ -101,7 +105,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('leetcode-activity')}
                 className={activeSection === 'leetcode-activity' ? 'active' : ''}
               >
-                LeetCode
+                <span data-text="LeetCode">LeetCode</span>
               </button>
             </li>
             <li>
@@ -109,7 +113,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('certifications')}
                 className={activeSection === 'certifications' ? 'active' : ''}
               >
-                Certifications
+                <span data-text="Certifications">Certifications</span>
               </button>
             </li>
             <li>
@@ -117,7 +121,7 @@ export default function Navigation() {
                 onClick={() => scrollToSection('contact')}
                 className={activeSection === 'contact' ? 'active' : ''}
               >
-                Contact
+                <span data-text="Contact">Contact</span>
               </button>
             </li>
           </ul>
