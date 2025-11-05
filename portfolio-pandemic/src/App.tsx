@@ -7,6 +7,7 @@ import Education from './components/Education';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Certifications from './components/Certifications';
+import Contact from './components/Contact';
 import './App.css';
 
 function App() {
@@ -55,13 +56,12 @@ function App() {
         certifications={resumeData.certifications} 
         achievements={resumeData.achievements} 
       />
+      <Contact personalInfo={resumeData.personalInfo} />
       <footer className="footer">
         <div className="container">
           <p>&copy; {new Date().getFullYear()} {resumeData.personalInfo.name}. All rights reserved.</p>
           <p>
             <a href={`mailto:${resumeData.personalInfo.email}`}>{resumeData.personalInfo.email}</a>
-            {' • '}
-            <a href={`tel:${resumeData.personalInfo.phone}`}>{resumeData.personalInfo.phone}</a>
           </p>
         </div>
       </footer>

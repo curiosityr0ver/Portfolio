@@ -1,7 +1,6 @@
 export type PersonalInfo = {
   name: string;
   email: string;
-  phone: string;
   links: {
     linkedin: string;
     github: string;
