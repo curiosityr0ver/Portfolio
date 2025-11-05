@@ -10,23 +10,55 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import GitHubActivity from './components/GitHubActivity';
 import LeetCodeActivity from './components/LeetCodeActivity';
+import resumeDataJson from './data/resume_data.json';
 import './App.css';
+
+// Helper function to prepend base URL to asset paths
+function processAssetPaths(data: ResumeData): ResumeData {
+  const baseUrl = import.meta.env.BASE_URL;
+  
+  // Helper to fix asset paths
+  const fixAssetPath = (path: string | undefined): string | undefined => {
+    if (!path) return path;
+    // If path starts with /, replace it with baseUrl
+    if (path.startsWith('/')) {
+      return `${baseUrl}${path.slice(1)}`;
+    }
+    return path;
+  };
+  
+  // Process education icons
+  const processedEducation = data.education.map(edu => ({
+    ...edu,
+    icon: fixAssetPath(edu.icon)
+  }));
+
+  // Process experience icons
+  const processedExperience = data.experience.map(exp => ({
+    ...exp,
+    icon: fixAssetPath(exp.icon)
+  }));
+
+  return {
+    ...data,
+    education: processedEducation,
+    experience: processedExperience
+  };
+}
 
 function App() {
   const [resumeData, setResumeData] = useState<ResumeData | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`/assets/resume_data.json?t=${Date.now()}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setResumeData(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Error loading resume data:', err);
-        setLoading(false);
-      });
+    try {
+      const processedData = processAssetPaths(resumeDataJson as ResumeData);
+      setResumeData(processedData);
+      setLoading(false);
+    } catch (err) {
+      console.error('Error loading resume data:', err);
+      setLoading(false);
+    }
   }, []);
 
   if (loading) {
