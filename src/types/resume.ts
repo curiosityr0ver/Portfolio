@@ -77,4 +77,5 @@ export type ResumeData = {
   technicalSkills: TechnicalSkills;
   certifications: Certification[];
   achievements: Achievement[];
+  resume_url?: string;
 };

@@ -41,11 +41,13 @@ export default function Navigation() {
     <>
       <nav className="navigation">
         <div className="nav-container">
-          <div className="nav-logo" onClick={() => scrollToSection('hero')}>
-            IM
+          <div className="nav-left">
+            <div className="nav-logo" onClick={() => scrollToSection('hero')}>
+              IM
+            </div>
+            <ThemeToggle />
           </div>
           <div className="nav-right">
-            <ThemeToggle />
             <button 
               className="mobile-menu-toggle"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

@@ -10,6 +10,7 @@ import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import GitHubActivity from './components/GitHubActivity';
 import LeetCodeActivity from './components/LeetCodeActivity';
+import FooterLinks from './components/FooterLinks';
 import resumeDataJson from './data/resume_data.json';
 import './App.css';
 
@@ -128,6 +129,7 @@ function App() {
           <p>
             <a href={`mailto:${resumeData.personalInfo.email}`}>{resumeData.personalInfo.email}</a>
           </p>
+          <FooterLinks personalInfo={resumeData.personalInfo} resumeUrl={resumeData.resume_url} />
         </div>
       </footer>
     </div>
