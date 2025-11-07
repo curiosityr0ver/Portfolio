@@ -1,0 +1,55 @@
+name: Deploy Experimental to GitHub Pages
+
+on:
+  push:
+    branches:
+      - experimental
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build with experimental base path
+        run: |
+          # Create a temporary vite config for experimental
+          cat > vite.config.experimental.ts << 'EOF'
+          import { defineConfig } from 'vite'
+          import react from '@vitejs/plugin-react'
+          
+          export default defineConfig({
+            plugins: [react()],
+            base: '/Portfolio/experimental/',
+          })
+          EOF
+          # Build with experimental config
+          mv vite.config.ts vite.config.main.ts
+          mv vite.config.experimental.ts vite.config.ts
+          npm run build
+          # Restore original config
+          mv vite.config.ts vite.config.experimental.ts
+          mv vite.config.main.ts vite.config.ts
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          destination_dir: experimental
+
