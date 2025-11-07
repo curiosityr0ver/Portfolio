@@ -41,12 +41,20 @@ export type Project = {
   highlights: string[];
 };
 
+export type Skill = {
+  name: string;
+  icon: string;
+  library: 'fa' | 'si';
+  color: string;
+  url: string;
+};
+
 export type TechnicalSkills = {
-  languages: string[];
-  backendFrameworks: string[];
-  databases: string[];
-  devops: string[];
-  other: string[];
+  languages: Skill[];
+  backendFrameworks: Skill[];
+  databases: Skill[];
+  devops: Skill[];
+  other: Skill[];
 };
 
 export type Certification = {

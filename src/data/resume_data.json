@@ -94,24 +94,56 @@
     }
   ],
   "technicalSkills": {
-    "languages": ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
-    "backendFrameworks": ["Spring Boot", "Hibernate", "React JS", "Node JS"],
-    "databases": ["MySQL", "SAP HANA", "MongoDB", "DynamoDB", "Redis"],
-    "devops": ["AWS", "Docker", "Kubernetes", "Kafka", "Git", "Azure"],
-    "other": ["Linux CLI", "Jenkins"]
+    "languages": [
+      { "name": "Java", "icon": "FaJava", "library": "fa", "color": "#ED8B00", "url": "https://www.java.com" },
+      { "name": "Python", "icon": "FaPython", "library": "fa", "color": "#3776AB", "url": "https://www.python.org" },
+      { "name": "JavaScript", "icon": "FaJs", "library": "fa", "color": "#F7DF1E", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+      { "name": "TypeScript", "icon": "SiTypescript", "library": "si", "color": "#3178C6", "url": "https://www.typescriptlang.org" },
+      { "name": "SQL", "icon": "FaDatabase", "library": "fa", "color": "#4479A1", "url": "https://www.w3schools.com/sql" }
+    ],
+    "backendFrameworks": [
+      { "name": "Spring Boot", "icon": "SiSpring", "library": "si", "color": "#6DB33F", "url": "https://spring.io/projects/spring-boot" },
+      { "name": "Hibernate", "icon": "SiHibernate", "library": "si", "color": "#BCAE79", "url": "https://hibernate.org" },
+      { "name": "React JS", "icon": "SiReact", "library": "si", "color": "#61DAFB", "url": "https://react.dev" },
+      { "name": "Node JS", "icon": "FaNode", "library": "fa", "color": "#339933", "url": "https://nodejs.org" }
+    ],
+    "databases": [
+      { "name": "MySQL", "icon": "SiMysql", "library": "si", "color": "#4479A1", "url": "https://www.mysql.com" },
+      { "name": "SAP HANA", "icon": "FaDatabase", "library": "fa", "color": "#0070F3", "url": "https://www.sap.com/products/technology-platform/hana.html" },
+      { "name": "MongoDB", "icon": "SiMongodb", "library": "si", "color": "#47A248", "url": "https://www.mongodb.com" },
+      { "name": "DynamoDB", "icon": "FaDatabase", "library": "fa", "color": "#4053D6", "url": "https://aws.amazon.com/dynamodb" },
+      { "name": "Redis", "icon": "SiRedis", "library": "si", "color": "#DC382D", "url": "https://redis.io" }
+    ],
+    "devops": [
+      { "name": "AWS", "icon": "FaCloud", "library": "fa", "color": "#232F3E", "url": "https://aws.amazon.com" },
+      { "name": "Docker", "icon": "FaDocker", "library": "fa", "color": "#2496ED", "url": "https://www.docker.com" },
+      { "name": "Kubernetes", "icon": "SiKubernetes", "library": "si", "color": "#326CE5", "url": "https://kubernetes.io" },
+      { "name": "Kafka", "icon": "SiApachekafka", "library": "si", "color": "#231F20", "url": "https://kafka.apache.org" },
+      { "name": "Git", "icon": "FaGitAlt", "library": "fa", "color": "#F05032", "url": "https://git-scm.com" }
+    ],
+    "other": [
+      { "name": "Linux CLI", "icon": "FaLinux", "library": "fa", "color": "#FCC624", "url": "https://www.linux.org" },
+      { "name": "Jenkins", "icon": "SiJenkins", "library": "si", "color": "#D24939", "url": "https://www.jenkins.io" }
+    ]
   },
   "certifications": [
     {
       "name": "SAP Certified Associate - Backend Developer - ABAP Cloud",
       "issuer": "SAP",
-      "certificateUrl": "https://www.credly.com/users/your-username/badges",
-      "verificationUrl": "https://www.sap.com/training-certification/certifications.html"
+      "certificateUrl": "https://learning.sap.com/certifications/sap-certified-associate-back-end-developer-abap-cloud",
+      "verificationUrl": "https://www.credly.com/badges/9dd8d493-6420-4d9f-9835-592cebb76fbe"
     },
     {
       "name": "Claude in Amazon Bedrock",
       "issuer": "Amazon",
-      "certificateUrl": "https://www.credly.com/users/your-username/badges",
-      "verificationUrl": "https://aws.amazon.com/training/certification/"
+      "certificateUrl": "https://anthropic.skilljar.com/claude-in-amazon-bedrock",
+      "verificationUrl": "https://verify.skilljar.com/c/yf2egtg447mr"
+    },
+    {
+      "name": "Google Analytics Individual Qualification",
+      "issuer": "Google",
+      "certificateUrl": "https://skillshop.withgoogle.com/",
+      "verificationUrl": "https://skillshop.exceedlms.com/student/award/7DvX9gWqw9HUfoEnmAzA1YtS"
     }
   ],
   "achievements": [
