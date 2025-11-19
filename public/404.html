@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // Save the current path and query string to session storage
+      // This allows the SPA to reconstruct the path after the redirect
+      var path = window.location.pathname;
+      var search = window.location.search;
+      
+      // Only redirect if we're not at the root already (prevent loops)
+      if (path !== '/Portfolio/' && path !== '/Portfolio') {
+        sessionStorage.setItem('gh_pages_redirect', path + search);
+        // Redirect to the repository base URL
+        window.location.href = '/Portfolio/';
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to application...</p>
+  </body>
+</html>
+

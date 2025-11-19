@@ -50,8 +50,16 @@ function processAssetPaths(data: ResumeData): ResumeData {
 function App() {
   const [resumeData, setResumeData] = useState<ResumeData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showFooterLinks, setShowFooterLinks] = useState(false);
 
   useEffect(() => {
+    // Handle GitHub Pages 404 redirect
+    const redirect = sessionStorage.getItem('gh_pages_redirect');
+    if (redirect) {
+      sessionStorage.removeItem('gh_pages_redirect');
+      window.history.replaceState(null, '', redirect);
+    }
+
     try {
       const processedData = processAssetPaths(resumeDataJson as ResumeData);
       setResumeData(processedData);
@@ -61,6 +69,42 @@ function App() {
       setLoading(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (loading) return;
+
+    // Handle URL navigation
+    const path = window.location.pathname.replace(/\/+$/, '').toLowerCase();
+    
+    // Scroll to projects if path ends with /projects
+    if (path.endsWith('/projects')) {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        setTimeout(() => {
+          projectsSection.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+
+    // Scroll to skills if path ends with /skills
+    if (path.endsWith('/skills')) {
+      const skillsSection = document.getElementById('skills');
+      if (skillsSection) {
+        setTimeout(() => {
+          skillsSection.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+
+    // Show hidden footer links if path ends with /links
+    if (path.endsWith('/links')) {
+      setShowFooterLinks(true);
+      // Automatically scroll to the bottom
+      setTimeout(() => {
+        window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+      }, 100);
+    }
+  }, [loading]);
 
   if (loading) {
     return (
@@ -129,7 +173,9 @@ function App() {
           <p>
             <a href={`mailto:${resumeData.personalInfo.email}`}>{resumeData.personalInfo.email}</a>
           </p>
-          <FooterLinks personalInfo={resumeData.personalInfo} resumeUrl={resumeData.resume_url} />
+          {showFooterLinks && (
+            <FooterLinks personalInfo={resumeData.personalInfo} resumeUrl={resumeData.resume_url} />
+          )}
         </div>
       </footer>
     </div>

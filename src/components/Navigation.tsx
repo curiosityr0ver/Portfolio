@@ -13,6 +13,10 @@ export default function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
+      // Manually update URL immediately on click for better UX
+      const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+      const newPath = `/${id === 'hero' ? '' : id}`;
+      window.history.pushState(null, '', `${baseUrl}${newPath}`);
     }
   };
 

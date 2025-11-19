@@ -4,16 +4,42 @@ export function useScrollSpy(sectionIds: string[], offset = 100) {
   const [activeSection, setActiveSection] = useState<string>(sectionIds[0] || '');
 
   useEffect(() => {
+    // 1. Debounced URL Updater
+    let timeoutId: number | null = null;
+
+    const updateUrl = (id: string) => {
+      if (timeoutId) window.clearTimeout(timeoutId);
+      timeoutId = window.setTimeout(() => {
+        // Only update if it's actually different to avoid history spam
+        const currentPath = window.location.pathname.replace(/\/+$/, '');
+        const newPath = `/${id === 'hero' ? '' : id}`;
+        
+        // Don't update if we are on the special links page
+        if (currentPath.endsWith('/links')) return;
+
+        // Construct full path including base URL if needed
+        const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+        const targetPath = `${baseUrl}${newPath}`;
+
+        if (window.location.pathname !== targetPath) {
+           window.history.replaceState(null, '', targetPath);
+        }
+      }, 500); // Debounce by 500ms
+    };
+
+    // 2. Observer setup
     const observerOptions = {
       root: null,
       rootMargin: `-${offset}px 0px -${offset}px 0px`,
-      threshold: 0.3,
+      threshold: 0.2,
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
+          const newId = entry.target.id;
+          setActiveSection(newId);
+          updateUrl(newId);
         }
       });
     };
@@ -39,7 +65,11 @@ export function useScrollSpy(sectionIds: string[], offset = 100) {
           const sectionHeight = section.offsetHeight;
 
           if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            setActiveSection(sectionIds[i]);
+            const newId = sectionIds[i];
+            if (activeSection !== newId) {
+               setActiveSection(newId);
+               updateUrl(newId);
+            }
             break;
           }
         }
@@ -51,9 +81,9 @@ export function useScrollSpy(sectionIds: string[], offset = 100) {
     return () => {
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
+      if (timeoutId) window.clearTimeout(timeoutId);
     };
-  }, [sectionIds, offset]);
+  }, [sectionIds, offset, activeSection]);
 
   return activeSection;
 }
-

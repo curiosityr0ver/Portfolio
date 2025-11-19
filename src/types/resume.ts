@@ -35,6 +35,7 @@ export type Project = {
   name: string;
   technologies: string[];
   github: string;
+  deployedLink?: string;
   description: string;
   thumbnail: string;
   screenshots: string[];
