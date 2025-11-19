@@ -1425,6 +1425,37 @@
   text-decoration: underline;
 }
 
+.view-counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.view-counter:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.view-counter-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.view-counter-number {
+  font-weight: 600;
+  font-family: monospace;
+}
+
 /* Footer Links - Stealthy Copy Section */
 .footer-links {
   display: flex;
