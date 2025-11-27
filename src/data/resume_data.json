@@ -115,7 +115,7 @@
         "Java 21"
       ],
       "github": "https://github.com/curiosityr0ver/url-shortener",
-      "deployedLink": "https://url-shortener-production-0f67.up.railway.app",
+      "deployedLink": "url-shortener-production-0f67.up.railway.app/swagger-ui.html",
       "description": "Production-ready URL Shortener built with Spring Boot 3, Java 21, and PostgreSQL.",
       "thumbnail": "assets/projects/url-shortener-thumbnail.png",
       "screenshots": [],
