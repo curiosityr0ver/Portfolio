@@ -70,7 +70,7 @@
       "github": "https://github.com/curiosityr0ver/custom-chat-app-production",
       "deployedLink": "https://custom-mern-chat-app-production.onrender.com",
       "description": "A live real-time chat application that allows one to one as well as group communication with secure authentication.",
-      "thumbnail": "assets/projects/chat-app-thumbnail.png",
+      "thumbnail": "assets/screenshots/chatApp.png",
       "screenshots": [],
       "highlights": [
         "Uses socket.IO for concurrent messaging.",
@@ -92,9 +92,9 @@
         "Kubernetes"
       ],
       "github": "https://github.com/curiosityr0ver/linear-algebra-pro-server",
-      "deployedLink": "https://linear-algebra-pro-server.vercel.app",
+      "deployedLink": "https://linear-algebra-pro-client.vercel.app",
       "description": "High-performance linear algebra and ML platform with 25+ REST endpoints, numerical core, and interactive Next.js visualization client.",
-      "thumbnail": "assets/projects/linear-algebra-thumbnail.png",
+      "thumbnail": "assets/screenshots/LinearAlgebraPro.png",
       "screenshots": [],
       "highlights": [
         "Designed and implemented 25+ REST endpoints (Matrix CRUD, arithmetic, PCA/SVD/QR, eigenvalue solvers, ML train/predict/history) with typed DTOs and Swagger/OpenAPI documentation.",
@@ -115,9 +115,9 @@
         "Java 21"
       ],
       "github": "https://github.com/curiosityr0ver/url-shortener",
-      "deployedLink": "url-shortener-production-0f67.up.railway.app/swagger-ui.html",
+      "deployedLink": "https://url-shortener-production-0f67.up.railway.app/swagger-ui.html",
       "description": "Production-ready URL Shortener built with Spring Boot 3, Java 21, and PostgreSQL.",
-      "thumbnail": "assets/projects/url-shortener-thumbnail.png",
+      "thumbnail": "assets/screenshots/UrlShortener.png",
       "screenshots": [],
       "highlights": [
         "Secure slug generation (random or custom) with hit tracking, expirations, and redirects.",
@@ -238,7 +238,7 @@
         "name": "AWS",
         "icon": "FaCloud",
         "library": "fa",
-        "color": "#232F3E",
+        "color": "##232F3E",
         "url": "https://aws.amazon.com"
       },
       {
