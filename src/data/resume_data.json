@@ -59,9 +59,16 @@
   "projects": [
     {
       "name": "Chat App",
-      "technologies": ["React.js", "MongoDB", "Node.js", "Express.js", "Socket.io", "Chakra UI"],
-      "github": "https://github.com/yourusername/chat-app",
-      "deployedLink": "https://your-chat-app.com",
+      "technologies": [
+        "React.js",
+        "MongoDB",
+        "Node.js",
+        "Express.js",
+        "Socket.io",
+        "Chakra UI"
+      ],
+      "github": "https://github.com/curiosityr0ver/custom-chat-app-production",
+      "deployedLink": "https://custom-mern-chat-app-production.onrender.com",
       "description": "A live real-time chat application that allows one to one as well as group communication with secure authentication.",
       "thumbnail": "assets/projects/chat-app-thumbnail.png",
       "screenshots": [],
@@ -74,9 +81,18 @@
     },
     {
       "name": "Linear-Algebra Pro",
-      "technologies": ["Next.js", "Express.js", "Docker", "Data Structures", "Algorithms", "CI/CD", "React.js", "Kubernetes"],
-      "github": "https://github.com/yourusername/linear-algebra-pro",
-      "deployedLink": "https://your-linear-algebra-app.com",
+      "technologies": [
+        "Next.js",
+        "Express.js",
+        "Docker",
+        "Data Structures",
+        "Algorithms",
+        "CI/CD",
+        "React.js",
+        "Kubernetes"
+      ],
+      "github": "https://github.com/curiosityr0ver/linear-algebra-pro-server",
+      "deployedLink": "https://linear-algebra-pro-server.vercel.app",
       "description": "High-performance linear algebra and ML platform with 25+ REST endpoints, numerical core, and interactive Next.js visualization client.",
       "thumbnail": "assets/projects/linear-algebra-thumbnail.png",
       "screenshots": [],
@@ -92,9 +108,14 @@
     },
     {
       "name": "URL Shortener",
-      "technologies": ["Spring Framework", "Spring Boot", "PostgreSQL", "Java 21"],
-      "github": "https://github.com/yourusername/url-shortener",
-      "deployedLink": "https://your-url-shortener.com",
+      "technologies": [
+        "Spring Framework",
+        "Spring Boot",
+        "PostgreSQL",
+        "Java 21"
+      ],
+      "github": "https://github.com/curiosityr0ver/url-shortener",
+      "deployedLink": "https://url-shortener-production-0f67.up.railway.app",
       "description": "Production-ready URL Shortener built with Spring Boot 3, Java 21, and PostgreSQL.",
       "thumbnail": "assets/projects/url-shortener-thumbnail.png",
       "screenshots": [],
@@ -109,35 +130,161 @@
   ],
   "technicalSkills": {
     "languages": [
-      { "name": "Java", "icon": "FaJava", "library": "fa", "color": "#ED8B00", "url": "https://www.java.com" },
-      { "name": "Python", "icon": "FaPython", "library": "fa", "color": "#3776AB", "url": "https://www.python.org" },
-      { "name": "JavaScript", "icon": "FaJs", "library": "fa", "color": "#F7DF1E", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-      { "name": "TypeScript", "icon": "SiTypescript", "library": "si", "color": "#3178C6", "url": "https://www.typescriptlang.org" },
-      { "name": "SQL", "icon": "FaDatabase", "library": "fa", "color": "#4479A1", "url": "https://www.w3schools.com/sql" }
+      {
+        "name": "Java",
+        "icon": "FaJava",
+        "library": "fa",
+        "color": "#ED8B00",
+        "url": "https://www.java.com"
+      },
+      {
+        "name": "Python",
+        "icon": "FaPython",
+        "library": "fa",
+        "color": "#3776AB",
+        "url": "https://www.python.org"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "FaJs",
+        "library": "fa",
+        "color": "#F7DF1E",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "SiTypescript",
+        "library": "si",
+        "color": "#3178C6",
+        "url": "https://www.typescriptlang.org"
+      },
+      {
+        "name": "SQL",
+        "icon": "FaDatabase",
+        "library": "fa",
+        "color": "#4479A1",
+        "url": "https://www.w3schools.com/sql"
+      }
     ],
     "backendFrameworks": [
-      { "name": "Spring Boot", "icon": "SiSpring", "library": "si", "color": "#6DB33F", "url": "https://spring.io/projects/spring-boot" },
-      { "name": "Hibernate", "icon": "SiHibernate", "library": "si", "color": "#BCAE79", "url": "https://hibernate.org" },
-      { "name": "React JS", "icon": "SiReact", "library": "si", "color": "#61DAFB", "url": "https://react.dev" },
-      { "name": "Node JS", "icon": "FaNode", "library": "fa", "color": "#339933", "url": "https://nodejs.org" }
+      {
+        "name": "Spring Boot",
+        "icon": "SiSpring",
+        "library": "si",
+        "color": "#6DB33F",
+        "url": "https://spring.io/projects/spring-boot"
+      },
+      {
+        "name": "Hibernate",
+        "icon": "SiHibernate",
+        "library": "si",
+        "color": "#BCAE79",
+        "url": "https://hibernate.org"
+      },
+      {
+        "name": "React JS",
+        "icon": "SiReact",
+        "library": "si",
+        "color": "#61DAFB",
+        "url": "https://react.dev"
+      },
+      {
+        "name": "Node JS",
+        "icon": "FaNode",
+        "library": "fa",
+        "color": "#339933",
+        "url": "https://nodejs.org"
+      }
     ],
     "databases": [
-      { "name": "MySQL", "icon": "SiMysql", "library": "si", "color": "#4479A1", "url": "https://www.mysql.com" },
-      { "name": "SAP HANA", "icon": "FaDatabase", "library": "fa", "color": "#0070F3", "url": "https://www.sap.com/products/technology-platform/hana.html" },
-      { "name": "MongoDB", "icon": "SiMongodb", "library": "si", "color": "#47A248", "url": "https://www.mongodb.com" },
-      { "name": "DynamoDB", "icon": "FaDatabase", "library": "fa", "color": "#4053D6", "url": "https://aws.amazon.com/dynamodb" },
-      { "name": "Redis", "icon": "SiRedis", "library": "si", "color": "#DC382D", "url": "https://redis.io" }
+      {
+        "name": "MySQL",
+        "icon": "SiMysql",
+        "library": "si",
+        "color": "#4479A1",
+        "url": "https://www.mysql.com"
+      },
+      {
+        "name": "SAP HANA",
+        "icon": "FaDatabase",
+        "library": "fa",
+        "color": "#0070F3",
+        "url": "https://www.sap.com/products/technology-platform/hana.html"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "SiMongodb",
+        "library": "si",
+        "color": "#47A248",
+        "url": "https://www.mongodb.com"
+      },
+      {
+        "name": "DynamoDB",
+        "icon": "FaDatabase",
+        "library": "fa",
+        "color": "#4053D6",
+        "url": "https://aws.amazon.com/dynamodb"
+      },
+      {
+        "name": "Redis",
+        "icon": "SiRedis",
+        "library": "si",
+        "color": "#DC382D",
+        "url": "https://redis.io"
+      }
     ],
     "devops": [
-      { "name": "AWS", "icon": "FaCloud", "library": "fa", "color": "#232F3E", "url": "https://aws.amazon.com" },
-      { "name": "Docker", "icon": "FaDocker", "library": "fa", "color": "#2496ED", "url": "https://www.docker.com" },
-      { "name": "Kubernetes", "icon": "SiKubernetes", "library": "si", "color": "#326CE5", "url": "https://kubernetes.io" },
-      { "name": "Kafka", "icon": "SiApachekafka", "library": "si", "color": "#231F20", "url": "https://kafka.apache.org" },
-      { "name": "Git", "icon": "FaGitAlt", "library": "fa", "color": "#F05032", "url": "https://git-scm.com" }
+      {
+        "name": "AWS",
+        "icon": "FaCloud",
+        "library": "fa",
+        "color": "#232F3E",
+        "url": "https://aws.amazon.com"
+      },
+      {
+        "name": "Docker",
+        "icon": "FaDocker",
+        "library": "fa",
+        "color": "#2496ED",
+        "url": "https://www.docker.com"
+      },
+      {
+        "name": "Kubernetes",
+        "icon": "SiKubernetes",
+        "library": "si",
+        "color": "#326CE5",
+        "url": "https://kubernetes.io"
+      },
+      {
+        "name": "Kafka",
+        "icon": "SiApachekafka",
+        "library": "si",
+        "color": "#231F20",
+        "url": "https://kafka.apache.org"
+      },
+      {
+        "name": "Git",
+        "icon": "FaGitAlt",
+        "library": "fa",
+        "color": "#F05032",
+        "url": "https://git-scm.com"
+      }
     ],
     "other": [
-      { "name": "Linux CLI", "icon": "FaLinux", "library": "fa", "color": "#FCC624", "url": "https://www.linux.org" },
-      { "name": "Jenkins", "icon": "SiJenkins", "library": "si", "color": "#D24939", "url": "https://www.jenkins.io" }
+      {
+        "name": "Linux CLI",
+        "icon": "FaLinux",
+        "library": "fa",
+        "color": "#FCC624",
+        "url": "https://www.linux.org"
+      },
+      {
+        "name": "Jenkins",
+        "icon": "SiJenkins",
+        "library": "si",
+        "color": "#D24939",
+        "url": "https://www.jenkins.io"
+      }
     ]
   },
   "certifications": [
